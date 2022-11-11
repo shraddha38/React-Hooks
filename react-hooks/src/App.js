@@ -6,12 +6,16 @@ import {
 import './App.css';
 import { UseStateAndUseEffect } from "./components/UseStateAndUseEffect";
 import { UseRefHook } from "./components/UseRefHook";
+import { UseCallbackHook } from "./components/UseCallbackHook";
+import { UseReducerHook } from "./components/UseReducerHook";
 
 
 const Approutes = () => {
   let routes = useRoutes([
     { path: "/side", element: <UseStateAndUseEffect /> },
     { path: "/ref", element: <UseRefHook /> },
+    { path: "/call", element: <UseCallbackHook /> },
+    { path: "/red", element: <UseReducerHook /> },
   ]);
   return routes;
 };

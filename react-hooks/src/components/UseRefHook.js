@@ -32,7 +32,7 @@ export const UseRefHook = () => {
         event.preventDefault();
         if (emailAddress.length < 1) {
             emailRef.current.focus();
-        } 
+        }
         else if (password.length < 1) {
             passwordRef.current.focus();
         }
@@ -67,7 +67,6 @@ export const UseRefHook = () => {
 
                 <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                     <TextField
-                        margin="normal"
                         required
                         fullWidth
                         id="email"
@@ -85,7 +84,6 @@ export const UseRefHook = () => {
                     <TextField
                         margin="normal"
                         required
-                        fullWidth
                         name="password"
                         label="Password"
                         type="password"
