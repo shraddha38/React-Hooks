@@ -8,6 +8,7 @@ import { UseStateAndUseEffect } from "./components/UseStateAndUseEffect";
 import { UseRefHook } from "./components/UseRefHook";
 import { UseCallbackHook } from "./components/UseCallbackHook";
 import { UseReducerHook } from "./components/UseReducerHook";
+import { CustomHook } from "./components/CustomHook";
 
 
 const Approutes = () => {
@@ -16,6 +17,7 @@ const Approutes = () => {
     { path: "/ref", element: <UseRefHook /> },
     { path: "/call", element: <UseCallbackHook /> },
     { path: "/red", element: <UseReducerHook /> },
+    { path: "/", element: <CustomHook /> },
   ]);
   return routes;
 };
