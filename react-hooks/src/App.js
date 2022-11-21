@@ -9,12 +9,12 @@ import { UseRefHook } from "./components/UseRefHook";
 import { UseCallbackHook } from "./components/UseCallbackHook";
 import { UseReducerHook } from "./components/UseReducerHook";
 import { CustomHook } from "./components/CustomHook";
-import ToggleComponent from "./components/ToggleComponent";
+import UseDebounce from "./components/custom-hooks/use-debounce";
 
 
 const Approutes = () => {
   let routes = useRoutes([
-    { path: "/side", element: <ToggleComponent /> },
+    { path: "/side", element: <UseDebounce /> },
     { path: "/ref", element: <UseRefHook /> },
     { path: "/call", element: <UseCallbackHook /> },
     { path: "/red", element: <UseReducerHook /> },
