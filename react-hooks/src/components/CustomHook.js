@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useFetch } from './useFetch'
+import { useFetch } from './custom-hooks/use-fetch'
 export const CustomHook = () => {
     const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
 

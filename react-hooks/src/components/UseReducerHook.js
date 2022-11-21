@@ -9,7 +9,7 @@ function reducer(state, action) {
 
     switch (action.type) {
         case ACTION_TYPES.INCREEMENT:
-            return { count: state.count + 1 }
+            return { count: state.count + action.payload }
         case ACTION_TYPES.DECREMENT:
             return { count: state.count - 1 }
         default:
@@ -18,25 +18,20 @@ function reducer(state, action) {
 
 }
 
-export const UseReducerHook = () => {   
-    
+export const UseReducerHook = () => {
     const [state, dispatch] = useReducer(reducer, { count: 0 });
-
     return (
         <>
             <Button
                 onClick={
-                    dispatch({ type: ACTION_TYPES.INCREEMENT })
+                    dispatch({ type: ACTION_TYPES.INCREEMENT, payload: 4 })
                 }
-            >
-            Add
+            >Add
             </Button>
             <Button
-                onClick={
-                    dispatch({ type: ACTION_TYPES.DECREMENT })
-                }
+                onClick={dispatch({ type: ACTION_TYPES.DECREMENT })}
             >
-            Delete
+                Delete
             </Button>
             {state}
         </>
